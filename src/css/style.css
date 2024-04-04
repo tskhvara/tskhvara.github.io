@@ -679,3 +679,32 @@ table {
   padding-left: 0;
   border-radius:5%;
 }
+
+.clearInput[type="number"]::-webkit-inner-spin-button,
+.clearInput[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    width: auto;
+}
+
+.no-rounded-left {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+.no-rounded-right {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+
+.input-border-tb{
+  border-top: #dad9d9 2px dashed !important;
+  border-bottom: #dad9d9 2px dashed !important;
+}
+
+input{
+  background-color:#fdfeff !important;
+}
+input::placeholder {
+  color: rgb(143, 172, 252) !important; 
+}
