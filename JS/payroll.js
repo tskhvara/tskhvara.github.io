@@ -1516,7 +1516,7 @@ cooperationInput.addEventListener('input', function(){
 
 additionalBonusFunction = function(){
     netBonus = additionalBonusNetInput.value;
-    bonus = netBonus * 122/100;
+    bonus = (netBonus * 100/80)*100/98;
     additionalBonusInput.value = bonus;
 };
 
@@ -2093,8 +2093,9 @@ for (let i = 3; i >= 0; i--) {
       sickLeaveSalary = (sickLeavePaidRate * sickLeave);
       bonusShiftSalary = (bonusShift * bonusShiftRate);
       totalSalaryGross = (nonHolidaySalary+nightSalary+holidaySalary+bonusSalary+additionalBonusSalary+paidVacationsSalary+sickLeaveSalary+bonusShiftSalary);
-      incomeTax = totalSalaryGross * 20/100;
       pensionTax = totalSalaryGross * 2/100;
+      incomeTax = (totalSalaryGross-pensionTax) * 20/100;
+    
       totalSalaryNet = totalSalaryGross - incomeTax - pensionTax - otherTax;
 
 
