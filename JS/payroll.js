@@ -1729,11 +1729,11 @@ if (mistakesCount > 0){
 
 let bonusApprovedText = ["No Bonus","Minimum","Advance","Overachiever"]
 
-if (workingHours >= bonusCriteria.hours[3]){
+if (bonusHours >= bonusCriteria.hours[3]){
     approvedBonusHours = 3;
-}else if (workingHours >= bonusCriteria.hours[2]){
+}else if (bonusHours >= bonusCriteria.hours[2]){
     approvedBonusHours = 2;
-}else if (workingHours >= bonusCriteria.hours[1]){
+}else if (bonusHours >= bonusCriteria.hours[1]){
     approvedBonusHours = 1;
 }else{
     approvedBonusHours = 0;
