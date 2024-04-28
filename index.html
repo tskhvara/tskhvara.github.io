@@ -6,9 +6,8 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0, shrink-to-fit=no"
     />
-
    
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -272,144 +271,235 @@
         
           <form class="calculator">
             <div class="row">
-            <div class="box1">
-              <div style="display: flex;">
+              <div class="box1">
+                    
+                <div class="responsive-flex">
+                <div class="input-container">
+                  <div class="input-mobile-container">
+                  <button type="button" class="mobile-button2 btn btn-outline-danger mobile-spoiler"><<<</button>
+                  <div class="label-responsive">
+                  <label class="label-mobile" for="current-month">Select a month: <span style="display:none" id="active-month"></span></label>
+                    <select id="current-month" class="mobile-select">
+                        <option value="current" selected>Current Month</option>
+                        <option value="0">January</option>
+                        <option value="1">February</option>
+                        <option value="2">March</option>
+                        <option value="3">April</option>
+                        <option value="4">May</option>
+                        <option value="5">June</option>
+                        <option value="6">July</option>
+                        <option value="7">August</option>
+                        <option value="8">September</option>
+                        <option value="9">October</option>
+                        <option value="10">November</option>
+                        <option value="11">December</option>
+                    </select>
+                  </div>
+                    <button type="button"class="mobile-button2 btn btn-outline-success mobile-spoiler"> >>> </button>
+                </div>
               </div>
-              <div style="display: flex;">
-                <label for="current-month" style="width: 35%;">Select a month: <span id="active-month"></span></label>
-                <label for="stage" style="width: 30%;">Stage:</label>
-                <label for="shift-type" style="width: 35%;">Shift type:</label>
+                <div class="input-container">
+                  <label for="stage">Stage:</label>
+                  <div class="pc-spoiler">
+                    <select id="stage" name="stage" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                  </div>
+                  <div class="mobile-spoiler" id="mobile-stage-spoiler" style="justify-content: space-around;">
+                    <button type="button" class="btn btn-outline-primary stage-button">Stage 1</button>
+                    <button type="button" class="btn btn-outline-primary stage-button">Stage 2</button>
+                    <button type="button" class="btn btn-outline-primary stage-button">Stage 3</button>
+                  </div>
+                  
+                    </div>
+                    <div class="input-container">
+                      <label for="shift-type">Shift type:</label>
+                      <div class="pc-spoiler">
+                    <select id="shift-type" name="shift-type" required>
+                        <option value="morning">Morning &#127749</option>
+                        <option value="afternoon">afternoon &#9925</option>
+                        <option value="night">Night &#127769</option>
+                    </select>
+                  </div>
+                  <div class="mobile-spoiler" id="mobile-stage-spoiler" style="justify-content: space-around;">
+                    <button type="button" class="btn btn-outline-primary stage-button">Morning &#127749</button>
+                    <button type="button" class="btn btn-outline-primary stage-button">afternoon &#9925</button>
+                    <button type="button" class="btn btn-outline-primary stage-button">Night &#127769</button>
+                  </div>
+                    <br>
+                </div>
                 <img src="src/icons/info.png" alt="info" class="info-icon" id="stage-info">
               </div>
-              <div class="input-container" style="display: flex;">
-                  <select id="current-month" style="width: 35%;">
-                    <option value="current" selected>Current Month</option>
-                    <option value="0">January</option>
-                    <option value="1">February</option>
-                    <option value="2">March</option>
-                    <option value="3">April</option>
-                    <option value="4">May</option>
-                    <option value="5">June</option>
-                    <option value="6">July</option>
-                    <option value="7">August</option>
-                    <option value="8">September</option>
-                    <option value="9">October</option>
-                    <option value="10">November</option>
-                    <option value="11">December</option>
-                  </select>
-                <select id="stage" name="stage" required style="width: 30%;">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                </select>
-                <br>
-                <select id="shift-type" name="shift-type" required style="width: 35%;">
-                  <option value="morning">Morning &#127749</option>
-                  <option value="afternoon">afternoon &#9925</option>
-                  <option value="night">Night &#127769</option>
-                </select>
-                <br>
-              </div>
-              <div style="display: flex;">
-                <label for="working-hours" style="width:40%">Working Hours: </label>
-                <label for="limit-check" style="width: 30%;">Limit</label>
-                <label for="overtime" style="width: 25%;" >Overtime hours</label>
+                <div class="responsive-flex">
+                <div class="input-container">
+                  <div class="input-mobile-container">
+                    <button type="button" class="mobile-button4 btn btn-outline-danger mobile-spoiler"> -10 </button>
+                    <button type="button" class="mobile-button4 btn btn-outline-danger mobile-spoiler"> -1 </button>
+                    <div class="label-responsive">
+                    <label class="label-mobile" for="working-hours">Working Hours: </label>
+                    <input type="number" id="working-hours" class="mobile-input" name="working-hours" step="any" min="0" max="240" value="96"
+                    placeholder="Insert total amount of hours" required>
+                  </div>
+                    <button type="button"class="mobile-button4 btn btn-outline-success mobile-spoiler"> +1 </button>
+                    <button type="button"class="mobile-button4 btn btn-outline-success mobile-spoiler"> +10 </button>
+                 </div>
+
+                </div>
+                <div class="input-container">
+                  
+                  <div class="input-mobile-container">
+                    <button type="button" class="mobile-button4 btn btn-outline-danger mobile-spoiler"> -10 </button>
+                    <button type="button" class="mobile-button4 btn btn-outline-danger mobile-spoiler"> -1 </button>
+                    <div class="label-responsive">
+                    <label class="label-mobile" for="limit-check">Limit</label>
+                    <input type="number" id="limit-check" class="mobile-input" name="limit-check" min="100" max="200"
+                    placeholder="Insert limit of working hours" required>
+                  </div>
+                    <button type="button"class="mobile-button4 btn btn-outline-success mobile-spoiler"> +1 </button>
+                    <button type="button"class="mobile-button4 btn btn-outline-success mobile-spoiler"> +10 </button>
+                  </div>
+                </div>
+                <div class="input-container pc-spoiler">
+                    <label for="overtime">Overtime hours</label>
+                    <input type="number" id="overtime" name="overtime" step="any" disabled>
+                  </div>
                 <img src="src/icons/info.png" alt="info" class="info-icon" id="hours-info">
-              </div>
-              <div style="display: flex;">
-                <input type="number" id="working-hours" name="working-hours" step="any" style="width:35%" min="0" max="240" value="96" placeholder="Insert amount of total amount of hours"  required ><br>
-                <input type="number" id="limit-check" name="limit-check" style="width:30%; text-align: center;" min="100" max="200" >
-                <input type="number" id="overtime" name="overtime" step="any" style="width:35%; text-align: right;" disabled>
-              </div>
-              <div style="display: flex;">
-                <div style="display: flex; width: 50%;">
-                  <label for="night-hours">Night Hours:</label>
-                  <img src="src/icons/info.png" alt="info" class="info-icon" id="nightHours-info">
-                </div> 
-                <div style="display: flex; width: 50%;">
-                  <label for="holiday-hours">Holiday Hours:</label>
-                  <img src="src/icons/info.png" alt="info" class="info-icon" id="holidayHours-info">
-                </div> 
-              </div>
-              <div style="display:flex;"> 
-                <input type="number" id="night-hours" name="night-hours" step="any" min="0" max="240" placeholder="Insert amount of night hours"  >
-                <input type="number" id="holiday-hours" name="holiday-hours" step="any" min="0" max="240" placeholder="Insert amount of double paid hours" >
-              </div> 
-              <div style="display: flex;">
-                <label for="bonus-shift-hours" style="width: 50%;">Bonus Shift Hours: </label>
-                <label for="bonus-shift">Bonus Shifts:</label>
+                </div>
+                <div class="responsive-flex">
+                
+                    <div class="input-container">
+                        <div class="input-mobile-container">
+                          <button type="button" class="mobile-button4 btn btn-outline-danger mobile-spoiler"> -10 </button>
+                          <button type="button" class="mobile-button4 btn btn-outline-danger mobile-spoiler"> -1 </button>
+                        <div class="label-responsive">
+                        <label class="label-mobile" for="night-hours">Night Hours:</label>
+                        <input type="number" id="night-hours" class="mobile-input"  name="night-hours" step="any" min="0" max="240"
+                        placeholder="Insert amount of night hours">
+                      </div>
+                        <button type="button"class="mobile-button4 btn btn-outline-success mobile-spoiler"> +1 </button>
+                        <button type="button"class="mobile-button4 btn btn-outline-success mobile-spoiler"> +10 </button>
+                      </div>
+                        <img src="src/icons/info.png" alt="info" class="info-icon" id="nightHours-info">
+                    </div>
+                    <div class="input-container">
+                      <div class="input-mobile-container">
+                        <button type="button" class="mobile-button4 btn btn-outline-danger mobile-spoiler"> -10 </button>
+                          <button type="button" class="mobile-button4 btn btn-outline-danger mobile-spoiler"> -1 </button>
+                          <div class="label-responsive">
+                          <label class="label-mobile" for="holiday-hours">Holiday Hours:</label>
+                        <input type="number" id="holiday-hours" class="mobile-input" name="holiday-hours" step="any" min="0" max="240"
+                        placeholder="Insert amount of double paid hours">
+                      </div>
+                        <button type="button"class="mobile-button4 btn btn-outline-success mobile-spoiler"> +1 </button>
+                        <button type="button"class="mobile-button4 btn btn-outline-success mobile-spoiler"> +10 </button>
+                      </div>
+                    <img src="src/icons/info.png" alt="info" class="info-icon" id="holidayHours-info">
+                    </div>
+                    
+                </div>
+                <div class="responsive-flex">
+                <div class="input-container">
+                  <div class="input-mobile-container">
+                  <button type="button" class="mobile-button4 btn btn-outline-danger mobile-spoiler"> -10 </button>
+                    <button type="button" class="mobile-button4 btn btn-outline-danger mobile-spoiler"> -1 </button>
+                    <div class="label-responsive">
+                    <label class="label-mobile" for="bonus-shift-hours">Bonus Shift Hours: </label>
+                    <input type="number" id="bonus-shift-hours" class="mobile-input" name="bonus-shift-hours" step="any" min=0 max=250
+                        placeholder="Insert amount of bonus shift hours">
+                    </div>
+                    <button type="button"class="mobile-button4 btn btn-outline-success mobile-spoiler"> +1 </button>
+                    <button type="button"class="mobile-button4 btn btn-outline-success mobile-spoiler"> +10 </button>
+                  </div>
+                </div>
+                <div class="input-container pc-spoiler">
+                  <label for="bonus-shift">Bonus Shifts:</label>
+                    <input type="number" id="bonus-shift" name="bonus-shift" min="0" disabled>
+                </div>
                 <img src="src/icons/info.png" alt="info" class="info-icon" id="bonusShift-info">
-              </div>
-              <div style="display: flex;">
-                <input type="number" id="bonus-shift-hours" name="bonus-shift-hours" step="any" min=0 max=250 style="width: 50%;" placeholder="Insert amount of bonus shift hours">
-                <input type="number" id="bonus-shift" name="bonus-shift" min="0" style="width: 50%;" placeholder="Bonus Shift" disabled>
-              </div> 
-              <div style="display: flex;">
-                <div style="display: flex; width: 50%;">
-                <label for="sick-leave">Sick Leave:</label>
-                <img src="src/icons/info.png" alt="info" class="info-icon" id="sickLeave-info">
-              </div>
-              <div style="display: flex; width: 50%;" >
-                <label for="paid-vacations">Paid Vacation days:</label>
-                <img src="src/icons/info.png" alt="info" class="info-icon" id="paidHours-info">
-              </div>
-              </div>
-              <div style="display: flex;">
-                <input type="number" id="sick-leave" name="sick-leave" min="0" max="30" placeholder="Insert amount of approved Sick Leave days">
-                <input type="number" id="paid-vacations" name="paid-vacations" min="0" max="31" placeholder="Insert amount of approved Paid Vacation days">
-              </div>
+                </div>
+                <div class="responsive-flex">
+                  <div class="input-container">
+                    <div>
+                      <div class="input-mobile-container">
+                        <button type="button" class="mobile-button2 btn btn-outline-danger mobile-spoiler"> -1 </button>
+                        <div class="label-responsive">
+                        <label class="label-mobile" for="paid-vacations">Paid Vacation days:</label>
+                        <input type="number" id="paid-vacations" class="mobile-input" name="paid-vacations" min="0" max="31"
+                        placeholder="Insert amount of approved Paid Vacation days">
+                      </div>
+                        <button type="button"class="mobile-button2 btn btn-outline-success mobile-spoiler"> +1 </button>
+                      </div>
+                        <img src="src/icons/info.png" alt="info" class="info-icon" id="paidHours-info">
+                    </div>
+                  </div>
+                  <div class="input-container">
+                    <div class="input-mobile-container">
+                    <button type="button" class="mobile-button2 btn btn-outline-danger mobile-spoiler"> -1 </button>
+                    <div class="label-responsive">
+                    <label class="label-mobile" for="sick-leave">Sick Leave:</label>
+                      <input type="number" id="sick-leave" class="mobile-input" name="sick-leave" min="0" max="30"
+                      placeholder="Insert amount of approved Sick Leave days">
+                    </div>
+                      <button type="button"class="mobile-button2 btn btn-outline-success mobile-spoiler"> +1 </button>
+                    </div>
+                        <img src="src/icons/info.png" alt="info" class="info-icon" id="sickLeave-info">
+                </div>
+                </div>
             </div>
+            
             <div id="pv-spoiler" class="spoiler" style="display: none;">
-              <div style="display: flex;">
-                        <label for="paid-vacations">Paid Vacations / Sick Leaves <span id="PVamount"></span></label>
-                        <img src="src/icons/info.png" alt="info" class="info-icon" id="pv-info">
-                    </div>     
-                      <div class="new-month">  
-                       <label for="range-input1"><span id="first-month-span" style="color: rgb(10, 25, 238); font-weight: bold;">first</span> month hours: <span id="range-value1" style="color: rgb(10, 25, 238); font-weight: bold;">120</span> Hours </label>
-                      <div class="input-container">
-                      <input type="range" id="range-input1" name="range-input1" min="0" max="240" value="120" style="width: 45%;">
-                      <label for="first-month-absence" style="width: 10%;">Vacations <br> /Leaves</label>
-                      <input type="number" id="first-month-absence" name="first-month-absence" min="0" max="31" style="width: 15%;">
-                      <label for="first-month-limit"  class="month-limit-input" style="width: 10%;">Month <br> Limit</label>
-                      <input type="number" id="first-month-limit" name="first-month-limit" min="0" max="200" style="width: 15%">
-                    </div>
-                      <div class="input-container">
-                        <input type="number" id="first-month-salary" name="first-month-salary" step="any" placeholder="Insert first month (TTS) gross salary">
-                        <input type="number" id="first-month-bonus" name="first-month-bonus" step="any" placeholder="Insert first month (TTS) bonus salary">
-                        <input type="number" id="first-month-salary-value" name="first-month-salary-value" step="any" style="width:15%;display:none"" disabled>
-                     </div>
-                    </div>
-                    <div class="new-month">
-                      <label for="range-input2"><span id="second-month-span" style="color: rgb(10, 25, 238); font-weight: bold;">Second</span> month hours: <span id="range-value2" style="color: rgb(10, 25, 238); font-weight: bold;">120</span> Hours </label>
-                      <div class="input-container">
-                      <input type="range" id="range-input2" name="range-input2" min="0" max="240" value="120" style="width:43%">
-                      <label for="Second-month-absence" style="width: 10%;">Vacations <br> /Leaves</label>
-                      <input type="number" id="second-month-absence" name="first-month-absence" min="0" max="31" style="width: 15%;">
-                      <label for="first-month-limit" class="month-limit-input" style="width:10%;">month <br> Limit</label>
-                      <input type="number" id="second-month-limit" name="second-month-limit" min="0" max="200" style="width:15%">
-                    </div>
-                      <div class="input-container">
-                        <input type="number" id="second-month-salary" name="second-month-salary" step="any" placeholder="Insert second month (TTS) gross salary">
-                        <input type="number" id="second-month-bonus" name="second-month-bonus" step="any" placeholder="Insert second month (TTS) bonus salary">
-                        <input type="number" id="second-month-salary-value" name="second-month-salary-value" step="any" style="width:15%; display:none" disabled>
-               </div>
-                    </div>
-                    <div class="new-month">
-                      <label for="range-input3"><span id="third-month-span" style="color: rgb(10, 25, 238); font-weight: bold;">Third</span> month hours: <span id="range-value3" style="color: rgb(10, 25, 238); font-weight: bold;">120</span> Hours </label>
-                      <div class="input-container">   
-                        <input type="range" id="range-input3" name="range-input3" min="0" max="240" value="120" style="width: 43%;">
-                        <label for="third-month-absence" style="width: 10%;">Vacations <br> /Leaves</label>
-                        <input type="number" id="third-month-absence" name="third-month-absence" min="0" max="31" style="width: 15%;">
-                        <label for="third-month-limit" class="month-limit-input" style="width: 10%;">Month <br> Limit</label>
-                        <input type="number" id="third-month-limit" name="third-month-limit" min="0" max="200" style="width: 15%;"> 
-                      </div>
-                      <div class="input-container">
-                        <input type="number" id="third-month-salary" name="third-month-salary" step="any" placeholder="Insert third month (TTS) gross salary">
-                        <input type="number" id="third-month-bonus" name="third-month-bonus" step="any" placeholder="Insert third month (TTS) bonus salary">
-                        <input type="number" id="third-month-salary-value" name="third-month-salary-value" step="any" style="width:15%; display:none"" disabled>
-                      </div>
-                    </div>      
-                    </div>
+    <div style="display: flex;">
+        <label for="paid-vacations">Paid Vacations / Sick Leaves <span id="PVamount"></span></label>
+        <img src="src/icons/info.png" alt="info" class="info-icon" id="pv-info">
+    </div>     
+    <div class="new-month">  
+        <label for="range-input1"><span id="first-month-span">first</span> month hours: <span id="range-value1">120</span> Hours </label>
+        <div class="input-container">
+            <input type="range" id="range-input1" name="range-input1" min="0" max="240" value="120">
+            <label for="first-month-absence">Vacations <br> /Leaves</label>
+            <input type="number" id="first-month-absence" name="first-month-absence" min="0" max="31">
+            <label for="first-month-limit" class="month-limit-input">Month <br> Limit</label>
+            <input type="number" id="first-month-limit" name="first-month-limit" min="0" max="200">
+        </div>
+        <div class="input-container">
+            <input type="number" id="first-month-salary" name="first-month-salary" step="any" placeholder="Insert first month (TTS) gross salary">
+            <input type="number" id="first-month-bonus" name="first-month-bonus" step="any" placeholder="Insert first month (TTS) bonus salary">
+            <input type="number" id="first-month-salary-value" name="first-month-salary-value" step="any" style="width:15%;display:none" disabled>
+        </div>
+    </div>
+    <div class="new-month">
+        <label for="range-input2"><span id="second-month-span">Second</span> month hours: <span id="range-value2">120</span> Hours </label>
+        <div class="input-container">
+            <input type="range" id="range-input2" name="range-input2" min="0" max="240" value="120">
+            <label for="Second-month-absence">Vacations <br> /Leaves</label>
+            <input type="number" id="second-month-absence" name="first-month-absence" min="0" max="31">
+            <label for="second-month-limit" class="month-limit-input">month <br> Limit</label>
+            <input type="number" id="second-month-limit" name="second-month-limit" min="0" max="200">
+        </div>
+        <div class="input-container">
+            <input type="number" id="second-month-salary" name="second-month-salary" step="any" placeholder="Insert second month (TTS) gross salary">
+            <input type="number" id="second-month-bonus" name="second-month-bonus" step="any" placeholder="Insert second month (TTS) bonus salary">
+            <input type="number" id="second-month-salary-value" name="second-month-salary-value" step="any" style="width:15%; display:none" disabled>
+        </div>
+    </div>
+    <div class="new-month">
+        <label for="range-input3"><span id="third-month-span">Third</span> month hours: <span id="range-value3">120</span> Hours </label>
+        <div class="input-container">   
+            <input type="range" id="range-input3" name="range-input3" min="0" max="240" value="120">
+            <label for="third-month-absence">Vacations <br> /Leaves</label>
+            <input type="number" id="third-month-absence" name="third-month-absence" min="0" max="31">
+            <label for="third-month-limit" class="month-limit-input">Month <br> Limit</label>
+            <input type="number" id="third-month-limit" name="third-month-limit" min="0" max="200"> 
+        </div>
+        <div class="input-container">
+            <input type="number" id="third-month-salary" name="third-month-salary" step="any" placeholder="Insert third month (TTS) gross salary">
+            <input type="number" id="third-month-bonus" name="third-month-bonus" step="any" placeholder="Insert third month (TTS) bonus salary">
+            <input type="number" id="third-month-salary-value" name="third-month-salary-value" step="any" style="width:15%; display:none" disabled>
+        </div>
+    </div>      
+</div>
           
             <div class="box2">
               
@@ -534,78 +624,78 @@
                 </div>
 
               <div id="shuffler-bonus-spoiler" class="s-type-spoiler" style="margin-bottom: 30px; display: block;">
-                <div style="display: flex; margin-bottom: 20px;">
-                  <div class="row" style="width: 100%;">
-                      <div class="col-2">
-                          <label class="col" for="shuffler-hours">Working Hours:</label>
+                <div class="bonus-inputs-container">
+                  <div class="input-container">
+                      <div class="input-mobile-container">
+                        
+                              <button type="button" id="hours-minus-10" class="mobile-button4 rounded-left no-rounded-right  btn btn-outline-danger"> -10 </button>
+                              <button type="button" id="hours-minus-1" class="mobile-button4 no-rounded-right no-rounded-left btn btn-outline-danger"> -1 </button>
+                              <div class="label-responsive">
+                                <label class="label-mobile" for="shuffler-hours">Working Hours:</label>
+                              <input type="number" class="mobile-input"  id="shuffler-hours" name="shuffler-hours" min="0" max="240" value="96">
+                            </div>
+                              <button type="button" id="hours-plus-1" class="mobile-button4 no-rounded-left no-rounded-right btn btn-outline-success"> +1 </button>
+                              <button type="button" id="hours-plus-10" class="mobile-button4 rounded-right no-rounded-left btn btn-outline-success"> +10 </button>
                       </div>
-                      <div class="col-5">
-                        <div class="row">
-                              <button type="button" id="hours-minus-10" class="col-2 offset-1 rounded-left no-rounded-right  btn btn-outline-danger"> -10 </button>
-                              <button type="button" id="hours-minus-1" class="col-2 no-rounded-right no-rounded-left btn btn-outline-danger"> -1 </button>
-                              <input type="number" class="col-2 clearInput input-border-tb" style="text-align: center; margin-bottom: 0px; width: auto;" id="shuffler-hours" name="shuffler-hours" min="0" max="240" value="96">
-                              <button type="button" id="hours-plus-1" class="col-2 no-rounded-left no-rounded-right btn btn-outline-success"> +1 </button>
-                              <button type="button" id="hours-plus-10" class="col-2 rounded-right no-rounded-left btn btn-outline-success"> +10 </button>
-                        </div> 
-                      </div>
-                      <div class="col-5">
+                    </div>
+                      <div class="bonus-buttons-container">
                           <button type="button" id="shuffler-hours-no-bonus" class="btn btn-outline-danger">No Bonus</button>
                           <button type="button" id="shuffler-hours-0" class="btn btn-outline-warning">0 %</button>
                           <button type="button" id="shuffler-hours-5" class="btn btn-outline-success btn-outline-green">5 %</button>
                           <button type="button" id="shuffler-hours-10" class="btn btn-outline-success">10 %</button>
                       </div>
-                  </div>
+                  
                   
                   <img src="src/icons/info.png" alt="info" class="info-icon" id="shuffler-hours-info">
               </div>
 
-                  <div style="display: flex; margin-bottom: 20px;">
-                    <div class="row" style="width: 100%;">
-                        <div class="col-2">
-                            <label for="shuffle-quality">Shuffle Quality: </label>
-                        </div>
-                        <div class="col-5">
-                          <div class="row">
-                                <button type="button" id="quality-minus-10" class="col-2 offset-1 rounded-left no-rounded-right btn btn-outline-danger"> -10 </button>
-                                <button type="button" id="quality-minus-1" class="col-2 no-rounded-right no-rounded-left btn btn-outline-danger"> -1 </button>
-                                <input type="number" class="col-2 clearInput input-border-tb" style="text-align: center; margin-bottom: 0; width: auto;" id="shuffle-quality" name="shuffler-quality" min="0" max="100" value="95">
-                                <button type="button" id="quality-plus-1" class="col-2 no-rounded-left no-rounded-right btn btn-outline-success"> +1 </button>
-                                <button type="button" id="quality-plus-10" class="col-2 rounded-right no-rounded-left btn btn-outline-success"> +10 </button>
-                            </div>
+                  <div class="bonus-inputs-container">
+                    <div class="input-container">
+                        <div class="input-mobile-container">
+                                <button type="button" id="quality-minus-10" class="mobile-button4 rounded-left no-rounded-right btn btn-outline-danger"> -10 </button>
+                                <button type="button" id="quality-minus-1" class="mobile-button4 no-rounded-right no-rounded-left btn btn-outline-danger"> -1 </button>
+                                <div class="label-responsive">
+                                <label class="label-mobile" for="shuffle-quality">Shuffle Quality: </label>
+                                <input type="number" class="mobile-input" id="shuffle-quality" name="shuffler-quality" min="0" max="100" value="95">
+                                </div>
+                                <button type="button" id="quality-plus-1" class="mobile-button4 no-rounded-left no-rounded-right btn btn-outline-success"> +1 </button>
+                                <button type="button" id="quality-plus-10" class="mobile-button4 rounded-right no-rounded-left btn btn-outline-success"> +10 </button>
                           </div>
-                        <div class="col-5">
+                        </div>
+                        <div class="bonus-buttons-container">
                             <button type="button" id="shuffle-quality-no-bonus" class="btn btn-outline-danger">No Bonus</button>
                             <button type="button" id="shuffle-quality-0" class="btn btn-outline-warning">0 %</button>
                             <button type="button" id="shuffle-quality-5" class="btn btn-outline-success btn-outline-green">5 %</button>
                             <button type="button" id="shuffle-quality-10" class="btn btn-outline-success">10 %</button>
                         </div>
-                      </div>
+                      
                     <img src="src/icons/info.png" alt="info" class="info-icon" id="shuffle-quality-info">
                 </div>
                 
 
-              <div style="display: flex; margin-bottom: 20px;" >
-                <div class="row" style="width: 100%;">
-                  <div class="col-2">
-                    <div class="row">
-                      <label style="padding-top: 20px;" for="shuffler-violation-points">Violation Points: </label> 
-                    </div>
-                    <div class="row">
-                      <label style="padding-top: 20px;" for="helpful-points">Helpful Points:</label> 
-                    </div>
-                  </div>                 
-                  <div class="col-5" style="display:flex; flex-direction:column; align-items:center; justify-content:space-around ">
-                  <div class="row" style="width: 100%;">
-                    <button type="button" id="violation-minus-1" class="col rounded-left no-rounded-right btn btn-outline-success"> -1 </button>
-                    <input type="number" class="clearInput col input-border-tb" style="text-align: center; width: auto; padding: 5px; margin-bottom: 0;"id="shuffler-violation-points" name="shuffler-violation-points" min="0" max="10" value="0">            
-                    <button type="button"  id="violation-plus-1" class="col rounded-left no-rounded-left btn btn-outline-danger"> +1 </button>    
+              <div class="bonus-inputs-container">
+                 <div class="col-6">
+                  <div class="input-container">
+                    <div class="input-mobile-container">
+                    <button type="button" id="violation-minus-1" class="mobile-button2 rounded-left no-rounded-right btn btn-outline-success"> -1 </button>
+                    <div class="label-responsive">
+                    <label class="label-mobile" for="shuffler-violation-points">Violation Points: </label> 
+                    <input type="number" class="mobile-input" id="shuffler-violation-points" name="shuffler-violation-points" min="0" max="10" value="0">
+                  </div>            
+                    <button type="button"  id="violation-plus-1" class="mobile-button2 rounded-left no-rounded-left btn btn-outline-danger"> +1 </button>    
                  </div>
-                  <div class="row" style="width: 100%;">
-                   <button type="button" id="helpful-minus-1" class="col rounded-left no-rounded-right btn btn-outline-danger"> -1 </button>
-                   <input type="number" class="clearInput col input-border-tb" style="text-align: center; padding: 5px; margin-bottom: 0; width: auto;"id="helpful-points" name="helpful-points" min="0" max="10" value="0">
-                   <button type="button"  id="helpful-plus-1" class="col rounded-right no-rounded-left btn btn-outline-success"> +1 </button>  
+                </div>
+                 <div class="input-container">
+                  <div class="input-mobile-container">
+                   <button type="button" id="helpful-minus-1" class="mobile-button2 rounded-left no-rounded-right btn btn-outline-danger"> -1 </button>
+                   <div class="label-responsive">
+                   <label class="label-mobile" for="helpful-points">Helpful Points:</label> 
+                   <input type="number" class="mobile-input" id="helpful-points" name="helpful-points" min="0" max="10" value="0">
+                   </div>
+                   <button type="button"  id="helpful-plus-1" class="mobile-button2 rounded-right no-rounded-left btn btn-outline-success"> +1 </button>  
                   </div>
                 </div>
+              </div>
           
                  <div class="col-5 vertical-style">
                   <div style="display: block; white-space: nowrap;">
@@ -615,7 +705,7 @@
                   <button type="button" id="helpful-points-10" class="col btn btn-outline-success">10 %</button>
                 </div>
                 </div>
-                </div>
+                
                 <img src="src/icons/info.png" alt="info" class="info-icon" id="helpful-info">
                 </div>
             

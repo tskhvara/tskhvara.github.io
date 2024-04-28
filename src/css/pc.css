@@ -1,0 +1,19 @@
+@media (min-width: 769px){
+    .responsive-flex{
+        display: flex;
+        justify-content: space-between;
+    }
+    .input-container{
+        width: 100%;
+    }
+    
+    .input-mobile-container{
+        display: block;
+    }
+    .mobile-spoiler{
+        display: none !important;
+    }
+    .pc-spoiler{
+        display: block !important;
+    }
+}

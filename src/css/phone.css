@@ -1,0 +1,154 @@
+@media (max-width: 768px){
+.container{
+    width: 768px !important;
+}
+Input[type="number"]::-webkit-inner-spin-button,
+Input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance:none;
+    margin: 0;
+    width: auto;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+}
+select::-ms-expand {
+    display: none;
+}
+select:focus,
+select:hover {
+    border-color: #007bff; /* Change to your desired color */
+    outline: none;
+}
+.mobile-spoiler{
+    display: block !important;
+}
+.pc-spoiler{
+    display: none !important;
+}
+.stage-button{
+    height: 100px;
+    width: 33%;
+}
+
+.input-container{
+    margin: 40px 15%;
+}
+#shuffler-bonus-spoiler .input-container{
+    margin-bottom: 30px;
+    margin: 0 auto;
+}
+.input-container label{
+    display: flex;
+    justify-content: center;
+}
+.input-container select{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 74%;
+    background-color: white !important;
+    border: none;
+    margin: 0 auto;
+    padding: 0;
+    font-size:x-large;
+}
+.input-container input{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 74%;
+    background-color: white !important;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-size:x-large;
+    
+}
+#working-hours:focus {
+    outline: none !important; /* Remove the outline when the input is focused */
+    border: none !important; /* Remove the border when the input is focused */
+  }
+  
+.input-container input:active{
+    border: none !important;
+}
+.mobile-button2{
+    height: 100px;
+    width: 30%;
+}
+.mobile-button4{
+    height: 100px;
+    width: 15%;
+}
+#shuffler-bonus-spoiler .input-mobile-container .mobile-button2{
+    height: 50px;
+    width: 30%;
+}
+
+#shuffler-bonus-spoiler .input-mobile-container .mobile-button4{
+    height: 50px;
+    width: 15%;
+}
+.input-mobile-container{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.mobile-input{
+    width: 100%;
+}
+.mobile-select{
+    width: auto;
+    text-align: center;
+    display: flex;
+}
+
+.label-responsive{
+    width: 40%;
+    height: 100px;
+    border-top: black 1px dotted;
+    border-bottom: black 1px dotted;
+    padding:4px 0;
+}
+#shuffler-bonus-spoiler .label-responsive{
+    width: 40%;
+    height: 50px;
+    border-top: black 1px dotted;
+    border-bottom: black 1px dotted;
+    padding:4px 0;
+}
+.label-mobile{
+    height: 24%;
+}
+#mobile-stage-spoiler{
+    display: flex !important;
+}
+
+.box1 .btn{
+    padding: 0;
+}
+.bonus-buttons-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto !important;
+
+}
+
+.bonus-inputs-container{
+    display: flex;
+    margin: 15px auto;
+}
+
+
+
+
+}
